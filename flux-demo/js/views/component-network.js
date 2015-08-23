@@ -13,22 +13,28 @@ var Network = React.createClass({
                 <div className="row">
                   <div className="col-xs-6">
                     <div className="form-group">
-                      <label htmlFor="esxi_key">ESXI KEY</label>
-                      <input type="text" className="form-control" id="esxi_key" name = "esxi_key"  />
+                      <label htmlFor="DNS_server">DNS server</label>
+                      <input type="text" className="form-control" id="DNS_server" name = "DNS_server"  placeholder = "172.20.10.1" />
                     </div>
                   </div>
                   <div className="col-xs-6">
                     <div className="form-group">
-                      <label htmlFor="vcsa_key">vCSA KEY</label>
-                      <input type="text" className="form-control" id="vcsa_key" name = "vcsa_key"   />
+                      <label htmlFor="Domain_name">Domain Name</label>
+                      <input type="text" className="form-control" id="Domain_name" name = "Domain_name"  placeholder = "mtlab local" />
                     </div>
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-xs-6">
                     <div className="form-group">
-                      <label htmlFor="vrops_key">vROPs KEY</label>
-                      <input type="text" className="form-control" id="vrops_key" name = "vrops_key"   />
+                      <label htmlFor="gateway">Gateway</label>
+                      <input type="text" className="form-control" id="gateway" name = "gateway"  placeholder = "172.20.10.1" />
+                    </div>
+                  </div>
+                  <div className="col-xs-6">
+                    <div className="form-group">
+                      <label htmlFor="netmask">Netmask</label>
+                      <input type="text" className="form-control" id="netmask" name = "netmask"  placeholder = "255.255.0.0" />
                     </div>
                   </div>
                 </div>

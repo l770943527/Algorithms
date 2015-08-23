@@ -19809,22 +19809,28 @@
 	                React.createElement("div", {className: "row"}, 
 	                  React.createElement("div", {className: "col-xs-6"}, 
 	                    React.createElement("div", {className: "form-group"}, 
-	                      React.createElement("label", {htmlFor: "esxi_key"}, "ESXI KEY"), 
-	                      React.createElement("input", {type: "text", className: "form-control", id: "esxi_key", name: "esxi_key"})
+	                      React.createElement("label", {htmlFor: "DNS_server"}, "DNS server"), 
+	                      React.createElement("input", {type: "text", className: "form-control", id: "DNS_server", name: "DNS_server", placeholder: "172.20.10.1"})
 	                    )
 	                  ), 
 	                  React.createElement("div", {className: "col-xs-6"}, 
 	                    React.createElement("div", {className: "form-group"}, 
-	                      React.createElement("label", {htmlFor: "vcsa_key"}, "vCSA KEY"), 
-	                      React.createElement("input", {type: "text", className: "form-control", id: "vcsa_key", name: "vcsa_key"})
+	                      React.createElement("label", {htmlFor: "Domain_name"}, "Domain Name"), 
+	                      React.createElement("input", {type: "text", className: "form-control", id: "Domain_name", name: "Domain_name", placeholder: "mtlab local"})
 	                    )
 	                  )
 	                ), 
 	                React.createElement("div", {className: "row"}, 
 	                  React.createElement("div", {className: "col-xs-6"}, 
 	                    React.createElement("div", {className: "form-group"}, 
-	                      React.createElement("label", {htmlFor: "vrops_key"}, "vROPs KEY"), 
-	                      React.createElement("input", {type: "text", className: "form-control", id: "vrops_key", name: "vrops_key"})
+	                      React.createElement("label", {htmlFor: "gateway"}, "Gateway"), 
+	                      React.createElement("input", {type: "text", className: "form-control", id: "gateway", name: "gateway", placeholder: "172.20.10.1"})
+	                    )
+	                  ), 
+	                  React.createElement("div", {className: "col-xs-6"}, 
+	                    React.createElement("div", {className: "form-group"}, 
+	                      React.createElement("label", {htmlFor: "netmask"}, "Netmask"), 
+	                      React.createElement("input", {type: "text", className: "form-control", id: "netmask", name: "netmask", placeholder: "255.255.0.0"})
 	                    )
 	                  )
 	                ), 
@@ -19885,9 +19891,70 @@
 	var Dhcp = React.createClass({displayName: "Dhcp",
 		render:function(){
 			return (
-	          React.createElement("div", {role: "tabpanel", className: "tab-pane", id: "dhcp"}, 
-	            React.createElement("h2", null, "hi i am dhcp !")
-	          )
+	         React.createElement("div", {role: "dhcppanel", className: "tab-pane", id: "dhcp"}, 
+	            React.createElement("h3", null, "network  "), 
+	              React.createElement("div", {id: "alert"}), 
+	              React.createElement("form", {id: "dhcpForm"}, 
+	                React.createElement("div", {className: "row"}, 
+	                  React.createElement("div", {className: "col-xs-6"}, 
+	                    React.createElement("div", {className: "form-group"}, 
+	                      React.createElement("label", {htmlFor: "subnet"}, "Subnet"), 
+	                      React.createElement("input", {type: "text", className: "form-control", id: "subnet", name: "subnet", placeholder: "172.20.0.0"})
+	                    )
+	                  ), 
+	                  React.createElement("div", {className: "col-xs-6"}, 
+	                    React.createElement("div", {className: "form-group"}, 
+	                      React.createElement("label", {htmlFor: "subnet_mask"}, "Subnet Mask"), 
+	                      React.createElement("input", {type: "text", className: "form-control", id: "subnet_mask", name: "subnet_mask", placeholder: "255.255.0.0"})
+	                    )
+	                  )
+	                ), 
+	                React.createElement("div", {className: "row"}, 
+	                  React.createElement("div", {className: "col-xs-6"}, 
+	                    React.createElement("div", {className: "form-group"}, 
+	                      React.createElement("label", {htmlFor: "range_from"}, "Range From"), 
+	                      React.createElement("input", {type: "text", className: "form-control", id: "range_from", name: "range_from", placeholder: "172.20.10.101"})
+	                    )
+	                  ), 
+	                  React.createElement("div", {className: "col-xs-6"}, 
+	                    React.createElement("div", {className: "form-group"}, 
+	                      React.createElement("label", {htmlFor: "range_to"}, "Range To"), 
+	                      React.createElement("input", {type: "text", className: "form-control", id: "range_to", name: "range_to", placeholder: "172.20.10.200"})
+	                    )
+	                  )
+	                ), 
+	                React.createElement("div", {className: "row"}, 
+	                  React.createElement("div", {className: "col-xs-6"}, 
+	                    React.createElement("div", {className: "form-group"}, 
+	                      React.createElement("label", {htmlFor: "routers"}, "Routers"), 
+	                      React.createElement("input", {type: "text", className: "form-control", id: "routers", name: "routers", placeholder: "172.20.10.1"})
+	                    )
+	                  ), 
+	                  React.createElement("div", {className: "col-xs-6"}, 
+	                    React.createElement("div", {className: "form-group"}, 
+	                      React.createElement("label", {htmlFor: "broad_addr"}, "Broadcast Address"), 
+	                      React.createElement("input", {type: "text", className: "form-control", id: "broad_addr", name: "broad_addr", placeholder: "172.20.10.255"})
+	                    )
+	                  )
+	                ), 
+	                React.createElement("div", {className: "row"}, 
+	                  React.createElement("div", {className: "col-xs-6"}, 
+	                    React.createElement("div", {className: "form-group"}, 
+	                      React.createElement("label", {htmlFor: "next_server"}, "Next Server"), 
+	                      React.createElement("input", {type: "text", className: "form-control", id: "next_server", name: "next_server", placeholder: "172.20.10.32"})
+	                    )
+	                  ), 
+	                  React.createElement("div", {className: "col-xs-6"}, 
+	                    React.createElement("div", {className: "form-group"}, 
+	                      React.createElement("label", {htmlFor: "filename"}, "Filename"), 
+	                      React.createElement("input", {type: "text", className: "form-control", id: "filename", name: "filename", placeholder: "172.20.10.200"})
+	                    )
+	                  )
+	                ), 
+	                React.createElement("button", {type: "submit", className: "btn btn-success"}, "Apply")
+	                
+	            )
+	      )
 
 				)
 		}
